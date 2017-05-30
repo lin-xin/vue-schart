@@ -51,7 +51,7 @@ export default {
 ```
 ## Options
 
-Refer to [the documentation for schart.js](http://test.omwteam.com/sChart/en.html).
+Refer to [the documentation for sChart.js](http://test.omwteam.com/sChart/en.html).
 
 ## Demo
 [click here](http://test.omwteam.com/sChart/demo.html)
