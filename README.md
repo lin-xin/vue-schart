@@ -8,7 +8,7 @@ Support vue.js 1.x & 2.x
 Install:
 
 ```
-npm install vue-schart -D
+npm install vue-schart -S
 ```
 
 Use in component:
