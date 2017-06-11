@@ -51,10 +51,10 @@ export default {
 ```
 ## Options
 
-Refer to [the documentation for sChart.js](http://test.omwteam.com/sChart/en.html).
+Refer to [the documentation for sChart.js](http://open.omwteam.com/sChart/en.html).
 
 ## Demo
-[click here](http://test.omwteam.com/sChart/demo.html)
+[click here](http://open.omwteam.com/sChart/demo.html)
 
 ## License
 [MIT license](https://github.com/lin-xin/vue-schart/blob/master/LICENCE).
