@@ -17,11 +17,11 @@ Use in component:
 <template>
     <div id="app">
         <schart :canvasId="canvasId"
-				:type="type"
-				:width="width"
-				:height="height"
-				:data="data"
-				:options="options"
+			:type="type"
+			:width="width"
+			:height="height"
+			:data="data"
+			:options="options"
 		></schart>
     </div>
 </template>
@@ -55,6 +55,8 @@ Refer to [the documentation for sChart.js](http://open.omwteam.com/sChart/en.htm
 
 ## Demo
 [click here](http://open.omwteam.com/sChart/demo.html)
+
+![demo](http://open.omwteam.com/sChart/static/img/demo.jpg)
 
 ## License
 [MIT license](https://github.com/lin-xin/vue-schart/blob/master/LICENCE).
