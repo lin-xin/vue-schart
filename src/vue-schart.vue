@@ -7,7 +7,7 @@
 <script>
     import sChart from 'schart.js';
     export default {
-        data() {
+        data: function() {
             return {}
         },
         props: {
@@ -36,9 +36,22 @@
                 required: false
             }
         },
-        mounted() {
-            var self = this;
-            new sChart(self.canvasId, self.type, self.data, self.options);
+        mounted: function() {
+            this.renderChart();
+        },
+        methods: {
+            renderChart: function(){
+                var self = this;
+                new sChart(self.canvasId, self.type, self.data, self.options);
+            }
+        },
+        watch: {
+            'data': function () {
+                this.renderChart();
+            },
+            'options': function () {
+                this.renderChart();
+            }
         }
     }
 </script>
