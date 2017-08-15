@@ -51,6 +51,21 @@
             },
             'options': function () {
                 this.renderChart();
+            },
+            'type': function () {
+                this.renderChart();
+            },
+            'width': function () {
+                var self = this;
+                self.$nextTick(function(){
+                    self.renderChart();
+                })
+            },
+            'height': function () {
+                var self = this;
+                self.$nextTick(function(){
+                    self.renderChart();
+                })
             }
         }
     }
