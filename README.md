@@ -12,6 +12,8 @@
 
 Support vue.js 1.x & 2.x
 
+[interactive demo](http://blog.gdfengshuo.com/example/#/vue-schart)
+
 ## Usage
 Install:
 
@@ -62,7 +64,6 @@ export default {
 Refer to [the documentation for sChart.js](http://open.omwteam.com/sChart/en.html).
 
 ## Demo
-[click here](http://open.omwteam.com/sChart/demo.html)
 
 ![demo](http://open.omwteam.com/sChart/static/img/demo.jpg)
 
