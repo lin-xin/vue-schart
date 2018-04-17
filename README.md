@@ -10,7 +10,7 @@
   <br>
 </p>
 
-Support vue.js 1.x & 2.x
+Support for use at the mobile. Support vue.js 1.x & 2.x
 
 [interactive demo](http://blog.gdfengshuo.com/example/#/vue-schart)
 
@@ -61,11 +61,11 @@ export default {
 ```
 ## Options
 
-Refer to [the documentation for sChart.js](http://open.omwteam.com/sChart/en.html).
+Refer to [the documentation for sChart.js](http://blog.gdfengshuo.com/example/sChart/).
 
 ## Demo
 
-![demo](http://open.omwteam.com/sChart/static/img/demo.jpg)
+![demo](http://blog.gdfengshuo.com/example/sChart/static/img/demo.png)
 
 ## License
 [MIT license](https://github.com/lin-xin/vue-schart/blob/master/LICENCE).

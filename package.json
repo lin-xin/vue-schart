@@ -1,25 +1,13 @@
 {
   "name": "vue-schart",
   "description": "Vue.js wrapper for sChart.js",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "author": "lin-xin <2981207131@qq.com>",
   "main": "src/vue-schart.vue",
   "scripts": {
   },
   "dependencies": {
-    "schart.js": "^1.0.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-latest": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "vue-loader": "^12.1.0",
-    "vue-template-compiler": "^2.3.3",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "schart.js": "^2.0.0"
   },
   "repository": {
     "type": "git",
