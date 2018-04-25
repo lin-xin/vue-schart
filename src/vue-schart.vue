@@ -9,6 +9,7 @@
     export default {
         data() {
             return {
+                schart: null,
                 opt: {}
             }
         },
@@ -35,6 +36,7 @@
         },
         methods: {
             renderChart(){
+                this.schart = null;
                 this.opt = this.options;
                 if(!this.width || !this.height){
                     if(!this.opt){
@@ -43,7 +45,7 @@
                         this.opt['autoWidth'] = true;
                     }
                 }
-                new sChart(this.canvasId, this.type, this.data, this.opt);
+                this.schart = new sChart(this.canvasId, this.type, this.data, this.opt);
             }
         },
         watch: {

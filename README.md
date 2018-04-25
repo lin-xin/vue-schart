@@ -1,7 +1,6 @@
-
 # vue-schart 
 
->  :bar_chart: Vue.js wrapper for sChart.js
+> :bar_chart: Vue.js wrapper for sChart.js
 
 <p>
   <a href="https://www.npmjs.com/package/vue-schart"><img src="https://img.shields.io/npm/dm/vue-schart.svg" alt="Downloads"></a>
@@ -15,6 +14,7 @@ Support for use at the mobile. Support vue.js 1.x & 2.x
 [interactive demo](http://blog.gdfengshuo.com/example/#/vue-schart)
 
 ## Usage
+
 Install:
 
 ```
