@@ -5,59 +5,48 @@
 </template>
 
 <script>
-    import sChart from 'schart.js';
-    export default {
-        data() {
-            return {
-                schart: null,
-                opt: {}
+import Schart from "schart.js";
+export default {
+    props: {
+        canvasId: {
+            type: String,
+            default: "",
+            required: true
+        },
+        options: {
+            type: Object,
+            required: true
+        }
+    },
+    mounted() {
+        this.renderChart();
+    },
+    methods: {
+        renderChart() {
+            if (!this.checkOptions()) {
+                return;
             }
+            const opt = { ...this.options };
+            new Schart(this.canvasId, opt);
         },
-        props: {
-            canvasId: {
-                type: String,
-                default: ''
-            },
-            type: {
-                type: String,
-                default: 'bar',
-            },
-            data: {
-                type: Array,
-                default: [],
-            },
-            options: {
-                type: Object,
-                required: false
+        checkOptions() {
+            const opt = this.options;
+            if (!opt.datasets || !opt.datasets.length) {
+                return false;
             }
-        },
-        mounted() {
-            this.renderChart();
-        },
-        methods: {
-            renderChart(){
-                this.schart = null;
-                this.opt = this.options;
-                if(!this.width || !this.height){
-                    if(!this.opt){
-                        this.opt = {autoWidth: true};
-                    }else{
-                        this.opt['autoWidth'] = true;
-                    }
-                }
-                this.schart = new sChart(this.canvasId, this.type, this.data, this.opt);
+            if (!opt.labels || !opt.labels.length) {
+                return false;
             }
-        },
-        watch: {
-            data(){
+            return true;
+        }
+    },
+    watch: {
+        options: {
+            handler(newValue, oldValue) {
                 this.renderChart();
             },
-            options(){
-                this.renderChart();
-            },
-            type(){
-                this.renderChart();
-            }
+            deep: true
         }
     }
+};
 </script>

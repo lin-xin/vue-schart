@@ -1,56 +1,80 @@
 <template>
-  <div id="app">
-    <schart class="wrapper" :canvasId="canvasId" :type="type" :data="data" :options="options"></schart>
-		<schart class="wrapper" canvasId="canvas1" type="pie" :data="data" :options="options"></schart>
-    <button @click="change">change</button>
-  </div>
+    <div id="app">
+        <schart class="wrapper" canvasId="canvas" :options="options"></schart>
+        <button @click="change('bar')">change to bar</button>
+        <button @click="change('line')">change to line</button>
+        <button @click="change('pie')">change to pie</button>
+        <button @click="change('ring')">change to ring</button>
+    </div>
 </template>
 
 <script>
-import Schart from './vue-schart.vue';
+import Schart from "./vue-schart";
 export default {
-  name: 'app',
-  data () {
-    return {
-			flag: false,
-      canvasId: 'myCanvas',
-			type: 'bar',
-			data: [
-				{name: '2014', value: 1342},
-				{name: '2015', value: 2123},
-				{name: '2016', value: 841},
-        {name: '2015', value: 2123},
-				{name: '2016', value: 589},
-				{name: '2017', value: 1795},
-			],
-			options: {
-				title: 'Total sales of stores in recent years',
-				bottomPadding: 30
-			}
+    name: "app",
+    data() {
+        return {
+            options: {
+                type: "bar",
+                title: {
+                    text: "最近一周各品类销售图"
+                },
+                bgColor: "#fbfbfb",
+                labels: ["周一", "周二", "周三", "周四", "周五"],
+                datasets: [
+                    {
+                        label: "家电",
+                        fillColor: "rgba(241, 49, 74, 0.5)",
+                        data: [234, 278, 270, 190, 230]
+                    },
+                    {
+                        label: "百货",
+                        data: [164, 178, 190, 135, 160]
+                    },
+                    {
+                        label: "食品",
+                        data: [144, 198, 150, 235, 120]
+                    }
+                ]
+            }
+        };
+    },
+    created() {
+        this.getData();
+    },
+    components: {
+        Schart
+    },
+    methods: {
+        getData() {
+            setTimeout(() => {
+                const data = [
+                    {
+                        label: "家电",
+                        fillColor: "rgba(241, 49, 74, 0.5)",
+                        data: [234, 278, 270, 190, 230]
+                    },
+                    {
+                        label: "百货",
+                        data: [164, 178, 190, 135, 160]
+                    },
+                    {
+                        label: "食品",
+                        data: [144, 198, 150, 235, 120]
+                    }
+                ];
+                this.$set(this.options1, "datasets", data);
+            }, 1000);
+        },
+        change(type) {
+            this.$set(this.options1, "type", type);
+        }
     }
-  },
-  components:{
-		Schart
-	},
-  methods: {
-    change(){
-      this.data = [
-        {name: '2015', value: 2123},
-				{name: '2016', value: 589},
-				{name: '2017', value: 1795},
-        {name: '2014', value: 1342},
-			];
-			this.type = 'line';
-			this.$set(this.options, 'title', '哈哈哈哈哈哈')
-    }
-  }
-}
+};
 </script>
 <style>
-.wrapper{
-	width: 500px;
-	height: 400px;
-  /* width: 7rem;
-  height: 5rem; */
+.wrapper {
+    width: 500px;
+    height: 400px;
 }
 </style>
