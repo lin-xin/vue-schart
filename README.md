@@ -9,7 +9,7 @@
   <br>
 </p>
 
-Support for use at the mobile. Support vue.js 1.x & 2.x
+Support for use at the mobile. Support vue.js 1.x & 2.x & 3.x
 
 ## Usage
 
